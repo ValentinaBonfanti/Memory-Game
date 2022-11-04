@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css';
 import Card from './components/Card';
 
@@ -14,7 +14,10 @@ const cardImages = [
 function App() {
 
    const [cards, setCards] = useState([]);
-   const [turns, setTurns] = useState(0)
+   const [turns, setTurns] = useState(0);
+   const [choiceOne, setChoiceOne] = useState(null);
+   const [choiceTwo, setChoiceTwo] = useState(null);
+   const [disabled, setDisabled] = useState(false)
 
    // 3 cosas: duplicate each card once because we need two of each card (so a user can match them together); it's going to randomize
   // the order of the cards in the array using the sort method; it's going to apply a random id to each of the 12 cards and
@@ -24,12 +27,54 @@ function App() {
     .sort(() => Math.random() - 0.5)
     .map((card) => ({ ...card, id: Math.random()}))
 
-    // setChoiceOne(null)
-    // setChoiceTwo(null)
+    setChoiceOne(null)
+    setChoiceTwo(null)
     setCards(shuffledCards)
     setTurns(0)
   }
-  console.log(cards, turns)
+
+  //handle a choice
+const handleChoice = (card) => {
+  choiceOne ? setChoiceTwo(card) : setChoiceOne(card)
+ }
+
+ //reset choices and increase turns
+ const resetTurn = () => {
+  setChoiceOne(null);
+  setChoiceTwo(null);
+  setTurns(prevTurns => prevTurns + 1)
+  setDisabled(false)
+ }
+
+ //compare 2 selected cards
+ useEffect(() => {
+  
+  if(choiceOne && choiceTwo) {
+    setDisabled(true)
+    if(choiceOne.src === choiceTwo.src) {
+      setCards(prevCards => {
+        return prevCards.map(card => {
+          if (card.src === choiceOne.src){
+            return {...card, matched: true}
+          } else{
+            return card
+          }
+        })
+      })
+      resetTurn()
+    }else{
+     setTimeout(() => {
+      resetTurn()
+     }, 1000); 
+    }
+  }
+ }, [choiceOne, choiceTwo]);
+
+ //para q aparezcan las card automaticamente
+ useEffect(() => {
+  shuffleCards()
+  }, [])
+
   return (
     <div className="App">
       <h1>Memory Game</h1>
@@ -40,10 +85,14 @@ function App() {
             <Card 
             key={card.id}
             card={card}
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched}
+            disabled={disabled}
             />
           ))
         }
       </div>
+      <p>Turns: {turns}</p>
     </div>
   );
 }
