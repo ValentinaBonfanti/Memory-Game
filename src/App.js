@@ -7,8 +7,8 @@ const cardImages = [
   { "src": "/img/hermione.png", matched: false },
   { "src": "/img/draco.png", matched: false },
   { "src": "/img/hagrid.png", matched: false },
-  { "src": "/img/dumbledor.jpg", matched: false },
-  { "src": "/img/ron.webp", matched: false }
+  { "src": "/img/dumbledor.png", matched: false },
+  { "src": "/img/ron.png", matched: false }
 ]
 
 function App() {

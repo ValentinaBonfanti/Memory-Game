@@ -25,6 +25,8 @@
     background: #2d243a;
     transition: all ease-in 0.2s;
     transition-delay: 0.2s;
+    height: 100%;
+    width: 100%;
 }
 .flipped .back {
     transform: rotateY(90deg);
