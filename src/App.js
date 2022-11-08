@@ -46,6 +46,17 @@ const handleChoice = (card) => {
   setDisabled(false)
  }
 
+ const handleCheck = (cards) =>{
+  if(cards.filter((card) => card.matched === false).length === 2){
+   
+    shuffleCards()
+    setDisabled(false)
+    alert('terminadoo')
+  } else{
+    resetTurn()
+  }
+}
+
  //compare 2 selected cards
  useEffect(() => {
   
@@ -61,20 +72,24 @@ const handleChoice = (card) => {
           }
         })
       })
-      resetTurn()
+      handleCheck(cards)
+      
     }else{
      setTimeout(() => {
       resetTurn()
      }, 1000); 
     }
+    
   }
+  
+  console.log(cards)
  }, [choiceOne, choiceTwo]);
 
  //para q aparezcan las card automaticamente
  useEffect(() => {
   shuffleCards()
   }, [])
-
+  
   return (
     <div className="App">
       <h1>Memory Game</h1>
