@@ -2,7 +2,7 @@
 
 # Memory Game 🤔🧠
 <div id="header" align="center">
-<img src="./screen memoru game.png" width="560" height="290"  />
+<img src="./screen memory game.png" width="560" height="290"  />
 </div>
 
 ## Deploy 👇
