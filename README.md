@@ -12,13 +12,12 @@
 
 ##
 <p>[EN]</p>
-<p>I don't know you but I'm a big fan of memory games and Game of Thrones🔥 (house Lannister🦁, of course). </p>
 
-This is a classic matching game that require players to match similar elements, in this case characters of Game of Thrones. The player turns over two cards at a time, with the goal of turning over a matching pair, by using their memory. Participants must find all matches in less than 12 turns. If you do that... we have a Winner!🙌
+This is a classic matching game that require players to match similar elements, in this case characters of Harry Potter. The player turns over two cards at a time, with the goal of turning over a matching pair, by using their memory. 
+
 <p>[ES]</p>
-<p>No sé ustedes pero yo soy fan de los juegos de memoria y aún más de Game of Thrones🔥 (casa Lannister🦁, obvio). </p>
 
-Este es un clásico juego de memoria que requiere que los jugadores hagan coincidir elementos similares, en este caso personajes de Game of Thrones. El jugador debe dar vuelta dos cartas con el objetivo de encontrar un par coincidente, usando su memoria. Los participantes deben encontrar todas las coincidencias en menos de 12 turnos. Si haces eso... tenemos un ganador!🙌
+Este es un clásico juego de memoria que requiere que los jugadores hagan coincidir cartas similares, en este caso personajes de Harry Potter. El jugador debe dar vuelta dos cartas con el objetivo de encontrar un par coincidente, usando su memoria. 
 
 
 <h3>The technologies I used: </h3>
