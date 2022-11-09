@@ -2,12 +2,12 @@
 
 # Memory Game 🤔🧠
 <div id="header" align="center">
-<img src="" width="560" height="290"  />
+<img src="./screen memoru game.png" width="560" height="290"  />
 </div>
 
 ## Deploy 👇
 
-[Link](https://memory-game-rosy.vercel.app/)
+[Link](http://memory-game-dusky-gamma.vercel.app/)
 
 
 ##
